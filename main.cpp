@@ -18,6 +18,7 @@ int main(){
         cout<<"6) Ordenar"<<endl;
         cout<<"7) Insertar"<<endl;
         cout<<"8) Eliminar"<<endl;
+        cout<<"9) Eliminar ultimo"<<endl;
         cout<<"0) Salir"<<endl;
         getline(cin,op);
 
@@ -94,13 +95,18 @@ int main(){
                 cadenas.erase(cadenas.begin()+p);
             }
         }
+        else if(op=="9"){
+           if(cadenas.empty()){
+               cout<<"Vector esta vacio"<<endl;
+           }
+           else{
+               cadenas.pop_back();
+           }
+        }
         else if(op=="0"){
             break;
         }
-
-
     }
-    
     return 0;
 }
 
