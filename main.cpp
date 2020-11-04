@@ -9,13 +9,25 @@ int main(){
     string op;
 
     while (true)
-    {
-        cout<<"1) Agregar al final"<<endl;
-        cout<<"2) Mostrar"<<endl;
+    {   cout<<"1) Inizializar"<<endl;
+        cout<<"2) Agregar al final"<<endl;
+        cout<<"3) Mostrar"<<endl;
         cout<<"0) Salir"<<endl;
         getline(cin,op);
 
+
         if(op=="1"){
+            size_t n;
+            string cadena;
+
+            cout<<"tam: ";
+            cin>>n;cin.ignore();
+            cout<<"Cadena: ";
+            getline(cin,cadena); 
+
+            cadenas = vector<string>(n,cadena);  
+        }
+        else if(op=="2"){
             string cadena;
             cout<<"Cadena: ";
             cin>> cadena; cin.ignore();
@@ -23,7 +35,7 @@ int main(){
             cadenas.push_back(cadena);
 
         }
-        else if(op=="2"){
+        else if(op=="3"){
             for (size_t i = 0; i < cadenas.size(); i++)
             {
                 cout<<cadenas[i]<<", ";
@@ -36,10 +48,6 @@ int main(){
 
     }
     
-
-
-
-
     return 0;
 }
 
