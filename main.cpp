@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 
 using namespace std;
 
@@ -14,6 +15,7 @@ int main(){
         cout<<"3) Mostrar"<<endl;
         cout<<"4) Frente"<<endl;
         cout<<"5) Ultimo"<<endl;
+        cout<<"6) Ordenar"<<endl;
         cout<<"0) Salir"<<endl;
         getline(cin,op);
 
@@ -32,7 +34,7 @@ int main(){
         else if(op=="2"){
             string cadena;
             cout<<"Cadena: ";
-            cin>> cadena; cin.ignore();
+            getline(cin,cadena); 
 
             cadenas.push_back(cadena);
 
@@ -59,6 +61,9 @@ int main(){
             else{
                 cout<<cadenas.back()<<endl;
             }
+        }
+        else if(op=="6"){
+            sort(cadenas.begin(),cadenas.end());
         }
         else if(op=="0"){
             break;
