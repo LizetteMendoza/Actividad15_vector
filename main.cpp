@@ -16,9 +16,10 @@ int main(){
         cout<<"4) Frente"<<endl;
         cout<<"5) Ultimo"<<endl;
         cout<<"6) Ordenar"<<endl;
+        cout<<"7) Insertar"<<endl;
+        cout<<"8) Eliminar"<<endl;
         cout<<"0) Salir"<<endl;
         getline(cin,op);
-
 
         if(op=="1"){
             size_t n;
@@ -64,6 +65,34 @@ int main(){
         }
         else if(op=="6"){
             sort(cadenas.begin(),cadenas.end());
+        }
+        else if(op=="7"){
+            size_t p;
+            string cadena;
+
+            cout<<"Posicion: ";
+            cin>>p; cin.ignore();
+            cout<<"Cadena: ";
+            getline(cin,cadena);
+
+            if(p>=cadenas.size()){
+                cout<<"Posicion no valida"<<endl;
+            }
+            else{
+                cadenas.insert(cadenas.begin()+p,cadena);
+            }
+        }
+        else if(op=="8"){
+            size_t p;
+            cout<<"Posicion: ";
+            cin>>p; cin.ignore();
+
+            if(p>=cadenas.size()){
+                cout<<"Posicion no valida"<<endl;
+            }
+            else{
+                cadenas.erase(cadenas.begin()+p);
+            }
         }
         else if(op=="0"){
             break;
