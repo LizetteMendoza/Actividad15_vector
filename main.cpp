@@ -12,6 +12,8 @@ int main(){
     {   cout<<"1) Inizializar"<<endl;
         cout<<"2) Agregar al final"<<endl;
         cout<<"3) Mostrar"<<endl;
+        cout<<"4) Frente"<<endl;
+        cout<<"5) Ultimo"<<endl;
         cout<<"0) Salir"<<endl;
         getline(cin,op);
 
@@ -42,9 +44,26 @@ int main(){
             }
             cout<<endl;
         }
+        else if(op=="4"){
+            if(cadenas.empty()){
+                cout<<"Vector esta vacio"<<endl;
+            }
+            else{
+                cout<<cadenas.front()<<endl;
+            }
+        }
+        else if(op=="5"){
+            if(cadenas.empty()){
+                cout<<"Vector esta vacio"<<endl;
+            }
+            else{
+                cout<<cadenas.back()<<endl;
+            }
+        }
         else if(op=="0"){
             break;
         }
+
 
     }
     
